@@ -43,10 +43,10 @@ while keep_buying:
             print("The previous item quantity is not valid")
     total=total_pay(value1,value2)
     total_to_pay=total_to_pay+total            
-    add_to_inventory(total,inventory_dictionary["total_price"])          
-    keep=input("Do you want to keep adding items YES/NO: ").lower()
-    if keep=="no":
-        keep_buying=False
+    add_to_inventory(total,inventory_dictionary["total_price"])  
+    
+    
+    keep_buying=valid_option_to_contin()
 print("")
 print("------- Report -------")
 print("")

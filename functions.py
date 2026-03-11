@@ -14,4 +14,15 @@ def print_inventory(inventory):
 def total_pay(value1,value2):
     total=value1*value2
     return total
-        
+
+
+def valid_option_to_contin():
+    is_ok=False
+    while is_ok==False:
+        value=input("Do you want to keep adding items YES/NO: ").lower()
+        if value=="no":
+            return False
+        elif value=="yes":
+            return True
+        else:
+            print("ONLY YES OR NO")
