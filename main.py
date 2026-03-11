@@ -1,5 +1,5 @@
 from verify_numbers import *
-
+from functions import *
 
 #Dictionary that store the items, prices and the quantitys
 inventory_dictionary={
@@ -21,13 +21,14 @@ total_to_pay=0
 print("Welcome to the Store")
 while keep_buying:
     
-    inventory_dictionary["items_name"].append(input("Item name: "))
+    name=input("Item name: ")
+    add_to_inventory(name,inventory_dictionary["items_name"])
     is_ok=False
     while is_ok==False:
         value=input("Item price: ")
         if (verify_floatnumber(value)):
             value1=float(value)
-            inventory_dictionary["prices_by_1"].append(value1)
+            add_to_inventory(value1,inventory_dictionary["prices_by_1"])
             is_ok=True
         else:
             print("The previous item price is not valid")
@@ -36,24 +37,19 @@ while keep_buying:
         value=input("Item quantity: ")
         if (verify_intnumber(value)):
             value2=int(value)
-            inventory_dictionary["quantitys"].append(value2)
+            add_to_inventory(value2,inventory_dictionary["quantitys"])
             is_ok=True
         else:
             print("The previous item quantity is not valid")
-    total=value1*value2
+    total=total_pay(value1,value2)
     total_to_pay=total_to_pay+total            
-    inventory_dictionary["total_price"].append(total)            
+    add_to_inventory(total,inventory_dictionary["total_price"])          
     keep=input("Do you want to keep adding items YES/NO: ").lower()
     if keep=="no":
         keep_buying=False
 print("")
 print("------- Report -------")
 print("")
-for i in range(len(inventory_dictionary["items_name"])):
-    print(f"Product: {inventory_dictionary["items_name"][i]}")
-    print(f"Unit Price: {inventory_dictionary["prices_by_1"][i]}")
-    print(f"Quantity: {inventory_dictionary["quantitys"][i]}")
-    #print(f"Total: {inventory_dictionary["total_price"][i]}")
-    print("")
+print_inventory(inventory_dictionary)
 
 print(f"Total Earned : {total_to_pay}")   
