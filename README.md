@@ -17,7 +17,7 @@ Each key contains a list where the program stores the values entered by the user
 The project uses multiple Python files:
 
 - **main.py** → Main program execution.
-- **validation.py** → Functions to validate that price and quantity are numbers greater than 0.
+- **verify_numbers.py** → Functions to validate that price and quantity are numbers greater than 0.
 - **functions.py** → Functions to:
   - Add items
   - Show inventory
