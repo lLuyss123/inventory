@@ -21,7 +21,7 @@ total_to_pay=0
 print("Welcome to the Store")
 while keep_buying:
     
-    name=input("Item name: ")
+    name=valid_item_name()
     add_to_inventory(name,inventory_dictionary["items_name"])
     is_ok=False
     while is_ok==False:

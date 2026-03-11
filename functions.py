@@ -26,3 +26,14 @@ def valid_option_to_contin():
             return True
         else:
             print("ONLY YES OR NO")
+            
+def valid_item_name ():
+    is_ok=False
+    while is_ok==False:
+        item_name=input("Item name: ")
+        
+        if len(item_name)==0:
+            print("Item name is not valid")
+        else:
+            is_ok=True
+            return item_name
