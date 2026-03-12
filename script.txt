@@ -1,0 +1,26 @@
+This is a store inventory program. The program allows the user to enter the item name, the price, and the quantity. Then the program calculates the total price for each item and the total earned.
+
+First, I import functions from two files: verify_numbers and functions.
+The file verify_numbers contains functions to verify that the numbers entered by the user are valid.
+
+In functions.py, I created different functions for the program.
+
+The first function is add_to_inventory. This function receives a value and a list, and it adds the value to the list using append.
+
+The second function is print_inventory. This function prints all the products stored in the dictionary, including the product name, the unit price, the quantity, and the total price.
+
+The function total_pay calculates the total price by multiplying the price and the quantity.
+
+The function valid_option_to_contin asks the user if they want to keep adding items. If the user writes yes, the program continues. If the user writes no, the program stops.
+
+The function valid_item_name verifies that the item name is not empty before saving it.
+
+In the main file, I create a dictionary called inventory_dictionary. This dictionary stores the information using four keys: items_name, prices_by_1, quantitys, and total_price. Each key contains a list where the program saves the values entered by the user.
+
+Then the program uses a while loop that runs while the user wants to keep adding items.
+
+Inside the loop, the program asks for the item name, the price, and the quantity. The program verifies that the numbers are valid before saving them.
+
+After that, the program calculates the total price for each product and adds it to the dictionary and to the variable total_to_pay.
+
+Finally, the program prints a report showing the inventory and the total earned.
