@@ -30,7 +30,7 @@ def valid_option_to_contin():
 def valid_item_name ():
     is_ok=False
     while is_ok==False:
-        item_name=input("Item name: ")
+        item_name=input("Item name: ").strip()
         
         if len(item_name)==0:
             print("Item name is not valid")
